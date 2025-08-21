@@ -1,2 +1,2 @@
-# Trabajo-Programaci-n
+# Trabajo-Programacion
 Trabajo Practico de TUP UTN pagina de tareas
