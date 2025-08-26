@@ -15,6 +15,7 @@ body {
     align-items: center;
     flex-wrap: wrap; /* permite que bajen de línea si no hay espacio */
     padding: 1rem;
+    text-align: center;
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
 }
