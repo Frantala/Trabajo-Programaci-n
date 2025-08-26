@@ -5,6 +5,9 @@ label{
 body{
     background-color: #6750A4;
     color: #0f2a46;
+    text-align: center;
+    padding-left: 0%;
+    justify-content: center;
 }
 .botonCargar{
     display: inline-block;
@@ -21,7 +24,15 @@ body{
 }
 .file-input {
     display: none; 
-  }
+}
+
+.fieldset{
+  display: inline-block;
+}
+
+.fieldset2{
+  display: inline-block;
+}
 
 .name{
  border: 3px solid blue;
@@ -31,13 +42,16 @@ body{
 
 .input-name{
   width: 200px;          
-  height: 3.5px;          
+  height: 3.5px; 
+  max-width: 100%;         
   padding: 5px 10px;     
   border: 1px solid #6750A4; 
   border-radius: 7px;    
   background-color: #f9f6ff; 
   font-size: 16px;       
   color: #242327; 
+  justify-content: center;  
+  align-items: center;   
 }
 
 .Second-name{
@@ -64,6 +78,57 @@ body{
 }
 
 .input-Lname{
+  width: 240px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.email{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-email{
+  width: 260px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.pass{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.password{
+  width: 230px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.pass-confir{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-pass{
   width: 20,8px;          
   height: 3.5px;          
   padding: 5px 10px;     

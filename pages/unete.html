@@ -10,7 +10,7 @@
     <h1>Formulario de Registro</h1>
     <p>¿quieres unirte a nostros? por favor, llena el formulario</p>
 
-    <fieldset> 
+    <fieldset class="fieldset"> 
         <label for="Nombre" class="name">Ingresa tu primer nombre: 
             <input id="Nombre" name="Nombre" type="text" class="input-name" required />
         </label>
@@ -20,17 +20,17 @@
         <label for="Apellido" class="Last-name">Ingresa tu apellido: 
             <input id="Apellido" name="Apellido" type="text" required class="input-Lname" />
         </label>
-        <label for="correo"> Ingresa tu email 
-            <input id="correo" name="correo" type="email" required> </input>
+        <label for="correo" class="email"> Ingresa tu email 
+            <input id="correo" name="correo" type="email" required class="input-email"> </input>
         </label>
-        <label for="contraseña"> Ingrese la contraseña 
-            <input id="contraseña" name="contraseña" type="password" pattern="[a-z0-5]{8,}" required> </input>
+        <label for="contraseña" class="pass"> Ingrese la contraseña 
+            <input id="contraseña" name="contraseña" type="password" pattern="[a-z0-5]{8,}" required class="password"> </input>
         </label>
-        <label> Confirme la contraseña 
-            <input id="contraseña_confirmada"  type="password"  oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')" ></input> 
+        <label for="contraseña_confirmada" class="pass-confir"> Confirme la contraseña 
+            <input id="contraseña_confirmada" class="input-pass"  type="password"  oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')" ></input> 
         </label>
     </fieldset>
-    <fieldset> 
+    <fieldset class="fieldset2"> 
         <label for="fotoPerfil" class="botonCargar"> + </label>
         <label> elija una foto de perfil</label>
         <input type="file" id="fotoPerfil" class="file-input">  </input>
