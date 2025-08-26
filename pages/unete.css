@@ -1,0 +1,75 @@
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+body{
+    background-color: #6750A4;
+    color: #0f2a46;
+}
+.botonCargar{
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+.file-input {
+    display: none; 
+  }
+
+.name{
+ border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-name{
+  width: 200px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.Second-name{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-Sname{
+  width: 20,5px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.Last-name{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-Lname{
+  width: 20,8px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
