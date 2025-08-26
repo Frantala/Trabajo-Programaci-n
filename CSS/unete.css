@@ -9,6 +9,7 @@ body{
     padding-left: 0%;
     justify-content: center;
 }
+
 .botonCargar{
     display: inline-block;
     border-radius: 50%;
@@ -21,27 +22,44 @@ body{
     cursor: pointer;
     font-size: 24px;
     font-weight: bold;
+    
 }
 .file-input {
     display: none; 
 }
 
-.fieldset{
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  gap: 20px;  
-  display: inline-block;
+.contenedor-foto{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 10px;              
+    margin: 20px 0;         
 }
 
 
-.fieldset2{
-  display: inline-block; 
-  padding: 25px;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 10px;
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;  /* ajusta el ancho al contenido */
+    margin: 0 auto;      /* centra el bloque horizontalmente */
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
+.fieldset2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+}
 
 .name{
  border: 2px solid blue;
@@ -147,3 +165,4 @@ body{
   font-size: 16px;       
   color: #242327; 
 }
+
