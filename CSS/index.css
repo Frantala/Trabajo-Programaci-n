@@ -1,10 +1,3 @@
-
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: sans-serif;
     margin: 0;
@@ -17,13 +10,12 @@ body {
 /* Estilos para el encabezado (Header) */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* logo izquierda, menú derecha */
     align-items: center;
+    flex-wrap: wrap; /* permite que bajen de línea si no hay espacio */
     padding: 1rem;
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
-    flex-wrap: wrap; 
-
 }
 
 .logo {
@@ -32,10 +24,10 @@ body {
 
 .navegacion-container nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 1.5rem; /* Espacio entre los elementos del menú */
+    gap: 1.5rem; /* espacio entre enlaces */
+    margin: 0;
+    padding: 0;
 }
 
 .navegacion-container nav ul li a {
@@ -212,7 +204,7 @@ main {
     }
 }
 
-@media (max-width: 420px ){
+@media (max-width: 480px ){
     .navbar {
         flex-direction: column;
         align-items: flex-start;
