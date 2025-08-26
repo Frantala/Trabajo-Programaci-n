@@ -20,7 +20,9 @@ body {
     padding: 1rem;
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap; 
+    
+
 }
 
 .logo {
@@ -133,7 +135,7 @@ main {
 }
 
 /* Media Queries para tables*/
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -158,31 +160,6 @@ main {
     }
 }
 
-@media (max-width: 480px ){
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navegacion-container {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .navegacion-container nav ul {
-        flex-direction: column; /* Apila los elementos del menú */
-        gap: 0.5rem;
-    }
-
-    .nueva-tarea {
-        flex-direction: column;
-    }
-
-    #agregar {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-}
-    
 @media (max-width: 992px ){
     .navbar {
         flex-direction: column;
@@ -207,8 +184,34 @@ main {
         width: 100%; /* El botón ocupa todo el ancho */
     }
 }
-
+    
 @media (max-width: 768px ){
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .navegacion-container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navegacion-container nav ul {
+        flex-direction: column; /* Apila los elementos del menú */
+        gap: 0.5rem;
+    }
+
+    .nueva-tarea {
+        flex-direction: column;
+    }
+
+    #agregar {
+        width: 100%; /* El botón ocupa todo el ancho */
+    }
+}
+
+@media (max-width: 420px ){
     .navbar {
         flex-direction: column;
         align-items: flex-start;
