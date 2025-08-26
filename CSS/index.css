@@ -71,7 +71,7 @@ main {
 
 #nueva-nota {
     flex: 1; /* El input toma el espacio restante */
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -81,7 +81,7 @@ main {
     border: none;
     background-color: #007BFF;
     color: white;
-    border-radius: 4px;
+    border-radius: 1px;
     cursor: pointer;
 }
 
