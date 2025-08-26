@@ -11,13 +11,10 @@ body {
 /* Estilos para el encabezado (Header) */
 .navbar {
     display: flex;
-    justify-content: space-between; /* logo izquierda, menú derecha */
+    justify-content: space-between; /* Logo izquierda, menú derecha */
     align-items: center;
-    flex-wrap: wrap; /* permite que bajen de línea si no hay espacio */
     padding: 1rem;
-    text-align: right;
     background-color: #f4f4f4;
-    border-bottom: 2px solid #ccc;
 }
 
 .logo {
