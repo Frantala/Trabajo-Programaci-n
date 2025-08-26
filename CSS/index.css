@@ -1,7 +1,7 @@
 /* Estilos generales */
 * {
-    margin: 0;
-    padding: 0;
+    margin: none;
+    padding: none;
 }
 body {
     font-family: sans-serif;
