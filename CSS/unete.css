@@ -178,9 +178,7 @@ input[type="password"] {
     font-family: 'Montserrat', sans-serif; /* Para que los puntos de contraseña usen la misma fuente */
 }
 
-/* ==================================
-    || Estilos para el Input de Archivo ||
-    ================================== */
+
 .file-input {
     display: none;
 }
@@ -227,9 +225,6 @@ input[type="password"] {
     color: var(--text-color);
 }
 
-/* ========================
-    || Botón de Envío ||
-    ======================== */
 .submit-btn {
     grid-column: 1 / -1; /* Ocupa todo el ancho al final */
     background-color: var(--button-bg);
