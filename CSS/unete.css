@@ -1,3 +1,29 @@
+.navegacion-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* espacio entre enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion-container nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 label{
     display: block;
     margin: 0.5rem 0;
@@ -54,7 +80,7 @@ body{
     flex-direction: column;
     gap: 20px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 25px;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -62,7 +88,7 @@ body{
 }
 
 .name{
- border: 2px solid blue;
+  border: 2px solid blue;
   border-radius: 15px; 
   padding: 0,5px;
 }
