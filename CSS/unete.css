@@ -1,168 +1,251 @@
-label{
-    display: block;
-    margin: 0.5rem 0;
-}
-body{
-    background-color: #6750A4;
-    color: #0f2a46;
-    text-align: center;
-    padding-left: 0%;
-    justify-content: center;
-}
-
-.botonCargar{
-    display: inline-block;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 55px;
-    width: 60px;
-    height: 60px;
-    background-color: #eee;
-    border: 2px dashed #aaa;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;  
+:root {
+    /* Tema Claro */
+    --bg-color: #f3e8ff;
+    --text-color: #4a148c;
+    --primary-color: #7e57c2;
+    --primary-light: #b39ddb;
+    --card-bg: #fff;
+    --border-color: #d1c4e9;
+    --input-bg: #fff;
+    --placeholder-color: #9575cd;
+    --button-bg: #7e57c2;
+    --button-text: #fff;
+    --delete-button-bg: #e53935;
+    --delete-button-hover: #d32f2f;
 }
 
-.file-input {
-    display: none; 
+.dark-mode {
+    /* Tema Oscuro */
+    --bg-color: #1a0033;
+    --text-color: #e3f2fd;
+    --primary-color: #9575cd;
+    --primary-light: #b39ddb;
+    --card-bg: #30194a;
+    --border-color: #4a148c;
+    --input-bg: #30194a;
+    --placeholder-color: #b39ddb;
+    --button-bg: #9575cd;
+    --button-text: #1a0033;
+    --delete-button-bg: #d32f2f;
+    --delete-button-hover: #c62828;
 }
 
-.contenedor-foto{
+/* ===============================
+    || Estilos Base y Tipografía ||
+    =============================== */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 10px;              
-    margin: 20px 0;         
+    flex-direction: column;
 }
 
+h1 {
+    font-family: 'Nata Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
 
-.fieldset {
+.header {
+    display: flex; /* Usa Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .logo img {
+    height: 50px; /* Ajusta la altura del logo */
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin-left: 20px; /* Espacio entre enlaces */
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+
+
+
+/* ============================
+    || Maquetación con Flexbox y Grid ||
+    ============================ */
+/* Usamos Flexbox para centrar el formulario */
+.form-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.form-card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    width: fit-content; 
-    margin: 0 auto;      
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
-.fieldset2 {
+.registration-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5rem;
+}
+
+.fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: grid;
+    /* Diseño de grilla para campos, responsive */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem 2rem; /* Espaciado vertical y horizontal */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Ajustado para que los elementos ocupen el ancho */
     width: fit-content;
-    margin: 0 auto;
-    padding: 25px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-
 }
 
-.name{
- border: 2px solid blue;
-  border-radius: 15px; 
-  padding: 0,5px;
+.fieldset > label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 0.5rem;
+    width: 100%; /* Asegura que la etiqueta ocupe todo el ancho disponible */
 }
 
-.input-name{
-  width: 200px;          
-  height: 3.5px; 
-  max-width: 100%;         
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
-  justify-content: center;  
-  align-items: center;   
+.fieldset > input {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 0.5rem;
+    width: 93.5%;
 }
 
-.Second-name{
-  border: 3px solid blue;
-  border-radius: 15px; 
-  padding: 0.5px;
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: var(--text-color);
 }
 
-.input-Sname{
-  width: 20,5px;          
-  height: 3.5px;          
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
+.form-input {
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
-.Last-name{
-  border: 3px solid blue;
-  border-radius: 15px; 
-  padding: 0.5px;
+.form-input::placeholder {
+    color: var(--placeholder-color);
 }
 
-.input-Lname{
-  width: 240px;          
-  height: 3.5px;          
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.5);
 }
 
-.email{
-  border: 3px solid blue;
-  border-radius: 15px; 
-  padding: 0.5px;
+/* Estilos para el campo de contraseña */
+input[type="password"] {
+    font-family: 'Montserrat', sans-serif; /* Para que los puntos de contraseña usen la misma fuente */
 }
 
-.input-email{
-  width: 260px;          
-  height: 3.5px;          
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
+/* ==================================
+    || Estilos para el Input de Archivo ||
+    ================================== */
+.file-input {
+    display: none;
 }
 
-.pass{
-  border: 3px solid blue;
-  border-radius: 15px; 
-  padding: 0.5px;
+.file-upload-container {
+    grid-column: 1 / -1; /* Ocupa todo el ancho en el grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.password{
-  width: 230px;          
-  height: 3.5px;          
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
+.custom-file-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    background-color: var(--card-bg);
+    border: 2px dashed var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el recuadro */
 }
 
-.pass-confir{
-  border: 3px solid blue;
-  border-radius: 15px; 
-  padding: 0.5px;
+.custom-file-label:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(126, 87, 194, 0.2);
 }
 
-.input-pass{
-  width: 20,8px;          
-  height: 3.5px;          
-  padding: 5px 10px;     
-  border: 1px solid #6750A4; 
-  border-radius: 7px;    
-  background-color: #f9f6ff; 
-  font-size: 16px;       
-  color: #242327; 
+
+.upload-icon {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1;
+    color: var(--primary-color);
 }
 
+.upload-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* ========================
+    || Botón de Envío ||
+    ======================== */
+.submit-btn {
+    grid-column: 1 / -1; /* Ocupa todo el ancho al final */
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

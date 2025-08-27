@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Únete a Nosotros | StoreRoom</title>
+  <!-- Archivo CSS específico para el formulario -->
+  <link rel="stylesheet" href="form.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <h2 class="logo">Notas</h2>
+  <div class="navegacion-container">
+      <nav>
+      <ul class="menu">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/completadas.html">Completadas</a></li>
+          <li><a href="/pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="/pages/unete.html" class="active">Únete a Nosotros</a></li>
+      </ul>
+      </nav>
+  </div>
+</header>
+
+<main class="form-main-container">
+  <div class="form-card">
+    <h1>Formulario de Registro</h1>
+    <p>¿Quieres unirte a nosotros? Por favor, llena el formulario.</p>
+    
+    <form id="registration-form" class="registration-form" action="#" method="POST">
+        <fieldset class="fieldset">
+            <legend>Datos Personales</legend>
+            <label for="nombre">Ingresa tu primer nombre:</label>
+            <input id="nombre" name="nombre" type="text" class="form-input" required />
+
+            <label for="segundo-nombre" >Ingresa tu segundo nombre:</label>
+            <input id="segundo-nombre" name="segundo-nombre" placeholder="Opcional" type="text" class="form-input" />
+            
+            <label for="apellido">Ingresa tu apellido:</label>
+            <input id="apellido" name="apellido" type="text" class="form-input" required />
+
+            <label for="correo">Ingresa tu email:</label>
+            <input id="correo" name="correo" type="email" class="form-input" required />
+
+            <label for="contraseña">Ingresa la contraseña:</label>
+            <input id="contraseña" name="contraseña" type="password" class="form-input" required />
+            
+            <label for="contraseña-confirmada">Confirma la contraseña:</label>
+            <input id="contraseña-confirmada" class="form-input" type="password" oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')" />
+            
+            <label for="edad">Ingresa tu edad:</label>
+            <input id="edad" name="edad" type="number" class="form-input" />
+
+            <div class="file-upload-container">
+                <label for="fotoPerfil" class="custom-file-label">
+                    <span class="upload-icon">+</span>
+                    <span class="upload-text">Elije una foto de perfil</span>
+                </label>
+                <input type="file" id="fotoPerfil" class="file-input">
+            </div>
+            
+            <button type="submit" class="submit-btn md3-button">Regístrate</button>
+        </fieldset>
+    </form>
+  </div>
+</main>
+
+<div class="footer-container">
+  <footer>
+    <p>Derechos de autor</p>
+  </footer>
+</div>
+
+</body>
+</html>
