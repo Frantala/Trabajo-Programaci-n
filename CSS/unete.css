@@ -1,0 +1,167 @@
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+body{
+    background-color: #6750A4;
+    color: #0f2a46;
+    text-align: center;
+    padding-left: 0%;
+    justify-content: center;
+}
+
+.botonCargar{
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;  
+}
+.file-input {
+    display: none; 
+}
+
+.contenedor-foto{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 10px;              
+    margin: 20px 0;         
+}
+
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: fit-content; 
+    margin: 0 auto;      
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.fieldset2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+}
+
+.name{
+ border: 2px solid blue;
+  border-radius: 15px; 
+  padding: 0,5px;
+}
+
+.input-name{
+  width: 200px;          
+  height: 3.5px; 
+  max-width: 100%;         
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+  justify-content: center;  
+  align-items: center;   
+}
+
+.Second-name{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-Sname{
+  width: 20,5px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.Last-name{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-Lname{
+  width: 240px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.email{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-email{
+  width: 260px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.pass{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.password{
+  width: 230px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
+.pass-confir{
+  border: 3px solid blue;
+  border-radius: 15px; 
+  padding: 0.5px;
+}
+
+.input-pass{
+  width: 20,8px;          
+  height: 3.5px;          
+  padding: 5px 10px;     
+  border: 1px solid #6750A4; 
+  border-radius: 7px;    
+  background-color: #f9f6ff; 
+  font-size: 16px;       
+  color: #242327; 
+}
+
