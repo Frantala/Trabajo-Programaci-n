@@ -1,47 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unete a nostros</title>
-    <link rel="stylesheet" href="/CSS/unete.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Únete a nosotros</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Formulario de Registro</h1>
-    <p>¿quieres unirte a nostros?, por favor, llena el formulario</p>
-    <header> 
-        <a href="#">Hola</a>
-    </header>
-    <div class="contenedor">
-        <fieldset class="fieldset"> 
-            <label for="Nombre" class="name">Ingresa tu primer nombre: 
-                <input id="Nombre" name="Nombre" type="text" class="input-name" required />
-            </label>
-            <label for="SegundoNombre" class="Second-name"> Ingresa tu segundo nombre 
-                <input placeholder="opcional" class="input-Sname">  </input>
-            </label>
-            <label for="Apellido" class="Last-name">Ingresa tu apellido: 
-                <input id="Apellido" name="Apellido" type="text" required class="input-Lname" />
-            </label>
-            <label for="correo" class="email"> Ingresa tu email 
-                <input id="correo" name="correo" type="email" required class="input-email"> </input>
-            </label>
-            <label for="contraseña" class="pass"> Ingrese la contraseña 
-                <input id="contraseña" name="contraseña" type="password" pattern="[a-z0-5]{8,}" required class="password"> </input>
-            </label>
-            <label for="contraseña_confirmada" class="pass-confir"> Confirme la contraseña 
-                <input id="contraseña_confirmada" class="input-pass"  type="password"  oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')" ></input> 
-            </label>
-        </fieldset>
-        <fieldset class="fieldset2"> 
-            <div class="contenedor-foto">
-                <label for="fotoPerfil" class="botonCargar">+</label>
-                <label for="fotoPerfil" class="texto-foto">Elija una foto de perfil</label>
-                <input type="file" id="fotoPerfil" class="file-input">
-            </div>
-            <label for="Edad"> ingrese su edad  <input type="number" id="Edad"></label>
-        </fieldset>
-    </div>
-</body>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-6">
 
+  <h1 class="text-3xl font-bold text-gray-800 mb-2">Formulario de Registro</h1>
+  <p class="text-gray-600 mb-6">¿Quieres unirte a nosotros? Por favor, llena el formulario</p>
+
+  <header class="mb-6">
+    <a href="#" class="text-blue-600 hover:underline">Hola</a>
+  </header>
+
+  <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-lg space-y-6">
+
+    <fieldset class="space-y-4">
+      
+      <div>
+        <label for="Nombre" class="block mb-1 font-medium text-gray-700">
+          Ingresa tu primer nombre:
+        </label>
+        <input id="Nombre" name="Nombre" type="text" 
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required>
+      </div>
+
+      <div>
+        <label for="SegundoNombre" class="block mb-1 font-medium text-gray-700">
+          Ingresa tu segundo nombre
+        </label>
+        <input id="SegundoNombre" placeholder="Opcional"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="Apellido" class="block mb-1 font-medium text-gray-700">
+          Ingresa tu apellido:
+        </label>
+        <input id="Apellido" name="Apellido" type="text" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="correo" class="block mb-1 font-medium text-gray-700">
+          Ingresa tu email:
+        </label>
+        <input id="correo" name="correo" type="email" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="contraseña" class="block mb-1 font-medium text-gray-700">
+          Ingrese la contraseña:
+        </label>
+        <input id="contraseña" name="contraseña" type="password" 
+          pattern="[a-z0-5]{8,}" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="contraseña_confirmada" class="block mb-1 font-medium text-gray-700">
+          Confirme la contraseña:
+        </label>
+        <input id="contraseña_confirmada" type="password"
+          oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </fieldset>
+
+    <fieldset class="space-y-4">
+      <div class="flex flex-col items-center">
+        <label for="fotoPerfil" class="flex items-center justify-center w-24 h-24 border-2 border-dashed border-gray-400 rounded-full text-gray-500 cursor-pointer hover:bg-gray-50">
+          +
+        </label>
+        <label for="fotoPerfil" class="text-sm text-gray-600 mt-2">Elija una foto de perfil</label>
+        <input type="file" id="fotoPerfil" class="hidden">
+      </div>
+
+      <div>
+        <label for="Edad" class="block mb-1 font-medium text-gray-700">
+          Ingrese su edad:
+        </label>
+        <input type="number" id="Edad" 
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </fieldset>
+
+  </div>
+</body>
 </html>
