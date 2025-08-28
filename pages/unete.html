@@ -77,31 +77,23 @@
               required
             />
 
-            <label for="contraseña">Ingresa la contraseña:</label>
-            <input
-              id="contraseña"
-              name="contraseña"
-              type="password"
-              class="form-input"
-              required
-            />
-            <label for="contraseña-confirmada">Confirma la contraseña:</label>
-            <input
-              id="contraseña-confirmada"
-              class="form-input"
-              type="password"
-              oninput="this.setCustomValidity(this.value !== document.getElementById('contraseña').value ? 'Las contraseñas no coinciden' : '')"
             />
             <label for="edad">Ingresa tu edad:</label>
             <input id="edad" name="edad" type="number" class="form-input" />
 
-            <div class="file-upload-container">
-              <label for="fotoPerfil" class="custom-file-label">
-                <span class="upload-icon">+</span>
-                <span class="upload-text">Elije una foto de perfil</span>
-              </label>
-              <input type="file" id="fotoPerfil" class="file-input" />
-            </div>
+            <label for="pais" >Pais </label> 
+            <select id="Pais" name="Pais" class="form-input" required> 
+                <option value="">Selecciona un país</option>
+                <option value="ar">Argentina</option>
+                <option value="mx">Paraguay</option>
+                <option value="es">Brasil</option>
+                <option value="Cl">Chile</option>
+                <option value="CO">Colombia</option>
+                <option value="cl">Venezuela</option>
+                <option value="BO">Bolivia</option>
+                <option value="Pe">Peru</option>
+                <option value="Ur">Uruguay</option>
+            </select>
 
             <button type="submit" class="submit-btn md3-button">
               Regístrate
