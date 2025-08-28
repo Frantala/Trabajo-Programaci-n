@@ -257,7 +257,5 @@ input[type="password"] {
 }
 
 .rad{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    vertical-align: middle;
 }
