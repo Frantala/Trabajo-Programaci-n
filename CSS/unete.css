@@ -251,3 +251,13 @@ input[type="password"] {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.selector{
+    display: block; 
+    text-align: left;
+}
+
+.rad{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
