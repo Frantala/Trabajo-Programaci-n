@@ -141,13 +141,19 @@ h1 {
     flex-direction: column;
     font-weight: 500;
     gap: 0.5rem;
-    width: 93.5%;
+    width: 90%;
 }
 
 legend {
     font-weight: 600;
     padding: 0 0.5rem;
     color: var(--text-color);
+}
+
+.pais{
+    width: 94,5%;
+    padding: 10px;
+
 }
 
 .form-input {
