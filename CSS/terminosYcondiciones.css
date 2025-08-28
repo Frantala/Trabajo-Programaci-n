@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #F3E8FF;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.terms-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  height: 200px;
+  overflow-y: scroll; 
+  background: #fafafa;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
