@@ -257,5 +257,11 @@ input[type="password"] {
 }
 
 .rad{
-    vertical-align: middle;
+    transform: translateY(25px); 
+    margin: 0px;
+}
+
+.title{
+    margin-top: 0px;
+    transform: translateY(23px);
 }
