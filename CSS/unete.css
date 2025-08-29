@@ -30,18 +30,16 @@
     --delete-button-hover: #c62828;
 }
 
-/* ===============================
-    || Estilos Base y Tipografía ||
-    =============================== */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.5s ease, color 0.5s ease;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
 h1 {
     font-family: 'Nata Sans', sans-serif;
@@ -51,41 +49,55 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-.header {
-    display: flex; /* Usa Flexbox para alinear elementos */
-    justify-content: space-between; /* Espacio entre logo y menú */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-  }
+.navbar {
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        gap: 20px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--text-color);
+    }
+    
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
+    }
   
   .logo img {
-    height: 50px; /* Ajusta la altura del logo */
+    height: 50px; 
   }
   
-  .nav-menu ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-menu li {
-    margin-left: 20px; /* Espacio entre enlaces */
-  }
-  
-  .nav-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-  }
+  .menu li a.active,
+    .menu li a:hover {
+        color: var(--primary-color);
+    }
+
+    .menu li a.active::after,
+    .menu li a:hover::after {
+        width: 100%;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
 
 
-
-/* ============================
-    || Maquetación con Flexbox y Grid ||
-    ============================ */
-/* Usamos Flexbox para centrar el formulario */
 .form-main-container {
     display: flex;
     justify-content: center;
@@ -179,9 +191,9 @@ legend {
     box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.5);
 }
 
-/* Estilos para el campo de contraseña */
+
 input[type="password"] {
-    font-family: 'Montserrat', sans-serif; /* Para que los puntos de contraseña usen la misma fuente */
+    font-family: 'Montserrat', sans-serif; 
 }
 
 
@@ -265,3 +277,24 @@ input[type="password"] {
     margin-top: 0px;
     transform: translateY(23px);
 }
+
+@media (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .menu {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        main {
+            padding: 1rem;
+        }
+        
+        .menu-container {
+            padding: 1.5rem;
+        }
+    }
