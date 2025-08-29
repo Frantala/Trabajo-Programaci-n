@@ -80,12 +80,23 @@ h1 {
   
   .menu li a.active,
     .menu li a:hover {
-        color: var(--primary-color);
+    color: var(--primary-color);
     }
 
     .menu li a.active::after,
     .menu li a:hover::after {
-        width: 100%;
+    width: 100%;
+    }
+    
+    .menu li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
     }
 
     .menu li a {
@@ -278,6 +289,11 @@ input[type="password"] {
     transform: translateY(23px);
 }
 
+.navbar a.active {
+  color: rgba(126, 87, 194, 0.5);   /* ejemplo de color resaltado */
+  font-weight: bold;
+   border-bottom: 2px solid rgba(126, 87, 194, 0.5);
+}
 @media (max-width: 600px) {
         .navbar {
             flex-direction: column;
