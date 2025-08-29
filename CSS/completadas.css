@@ -1,211 +1,210 @@
-* General */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #F8F7FA;
-  color: #1C1B1F;
+:root {
+  /* Variables de tema claro: colores principales, fondos y botones */
+  --bg-color: #f3e8ff;
+  --text-color: #4a148c;
+  --primary-color: #7e57c2;
+  --primary-light: #b39ddb;
+  --card-bg: #fff;
+  --border-color: #d1c4e9;
+  --button-bg: #7e57c2;
+  --button-text: #fff;
+  --delete-button-bg: #e53935;
+  --delete-button-hover: #d32f2f;
 }
 
+.dark-mode {
+  /* Variables de tema oscuro, sobreescriben las del tema claro */
+  --bg-color: #1a0033;
+  --text-color: #e3f2fd;
+  --primary-color: #9575cd;
+  --primary-light: #b39ddb;
+  --card-bg: #30194a;
+  --border-color: #4a148c;
+  --button-bg: #9575cd;
+  --button-text: #1a0033;
+  --delete-button-bg: #d32f2f;
+  --delete-button-hover: #c62828;
+}
 
-header {
-  background: #6750A4;
-  padding: 10px 20px;
+body {
+  /* Estilos generales de página: fuente, colores, layout vertical y transición */
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
+  /* Barra superior: layout horizontal, espacio entre items y sombra */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; 
+  background: var(--primary-light);
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   gap: 10px;
 }
 
 .logo {
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  /* Estilo del logo */
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  display: flex;
 }
 
 .menu {
-  list-style: none;
+  /* Lista de links del menú: horizontal por defecto */
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 15px;
+  list-style: none;
   margin: 0;
   padding: 0;
+  gap: 1rem;
 }
 
-.menu li a {
+.menu li {
+  min-width: auto;
+}
+
+.menu a {
+  /* Estilo de los links, con hover */
+  display: block;
   text-decoration: none;
-  border-radius: 20px;
-  padding: 6px 16px;
-  color: white;
   font-weight: 500;
-  transition: background 0.3s ease;
-  display: flex;
-  justify-content: center;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.menu li a:hover,
-.menu li a.active {
-  background: #7F67BE;
-}
-
-/* Caja central */
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
+.menu a:hover {
+  color: var(--primary-color);
+  background: rgba(126, 87, 194, 0.1);
 }
 
 .tareas-completadas {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 20px;
-  padding: 20px;
-  width: 400px;
-  max-width: 100%;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  /* Contenedor de tareas: centrado, fondo y sombra */
+  flex: 1;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* Nueva tarea */
-.nueva-tarea {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.tareas-completadas h2 {
+  /* Título centrado */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
-.nueva-tarea input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #6750A4;
-  border-radius: 10px;
-}
-
-/* Lista de tareas */
 .lista-tareas {
+  /* Lista de tareas: vertical y con separación */
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
 .tarea {
+  /* Cada tarea: layout horizontal, borde y efecto hover */
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  border: 2px solid #E0E0E0;
-  border-radius: 10px;
-  padding: 10px;
-  background: #F9F6FF;
-  gap: 10px;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  background: var(--bg-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarea:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.texto {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .acciones {
+  /* Contenedor de botones de acción */
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .btn-circular {
-  width: 28px;
-  height: 28px;
-  border: none;
+  /* Botones redondos */
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #6750A4;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-circular:hover {
-  background: #7F67BE;
-}
-
-/* Botón estilo Material 3 */
-.md3-button {
-  background-color: #6750A4;
-  color: white;
   border: none;
-  border-radius: 20px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.md3-button:hover {
-  background-color: #7F67BE;
-}
-
-/* Footer */
 footer {
+  /* Footer siempre al final */
+  background: var(--primary-light);
+  color: var(--text-color);
   text-align: center;
-  padding: 15px;
-  background: #6750A4;
-  color: white;
+  padding: 1rem 2rem;
   margin-top: auto;
 }
 
-/* ==================== */
-/*     RESPONSIVE       */
-/* ==================== */
-
-/* Tablets */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: center;
-  }
-  
+/* MEDIA QUERIES: ajustes según ancho de pantalla */
+@media (min-width: 769px) {
+  /* Menú horizontal en pantallas grandes */
   .menu {
-    justify-content: center;
-    flex: 1;
-  }
-
-  .tareas-completadas {
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
-/* Celulares */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  /* Navbar y menú para tablet/móviles grandes */
   .navbar {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .menu {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-
-  .menu li a {
+    flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 10px;
+    gap: 1rem;
   }
 
-  .tarea {
-    flex-direction: column;
-    align-items: stretch;
+  .menu li:last-child {
+    flex-basis: 100%;
   }
+}
 
-  .acciones {
-    justify-content: flex-end;
+@media (max-width: 600px) {
+  .menu li:nth-last-child(2) {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu li:nth-child(2) {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu li {
+    flex-basis: 100%;
   }
 }
