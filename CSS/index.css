@@ -1,237 +1,262 @@
-
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Estilos para el encabezado (Header) */
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Logo izquierda, menú derecha */
-    align-items: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-}
-
-.menu{
-    list-style: none;
-    display: flex;        
-    flex-direction: row;  
-    gap: 1.5rem;          
-    margin: 0;
-    padding: 0;
-}
-.logo {
-    margin: 0;
-}
-
-.navegacion-container nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem; /* espacio entre enlaces */
-    margin: 0;
-    padding: 0;
-}
-
-.navegacion-container nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Estilos para el contenido principal (Main) */
-main {
-    flex: 1; /* El main ocupa el espacio restante */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.menu-container {
-    width: 100%;
-    max-width: 600px;
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.section-notas h2 {
-    text-align: center;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.nueva-tarea {
-    display: flex;
-    gap: 0.5rem;
-}
-
-#nueva-nota {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none; /* Evita que el usuario pueda redimensionarlo manualmente */
-    overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-#agregar {
-    padding: 0.5rem 1rem;
-    border: 1px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 1px;
-    cursor: pointer;
-}
-
-.lista-tareas {
-    list-style: none;
-    padding: 0;
-}
-
-.tarea {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.btn-circular {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-/* Estilos para el pie de página (Footer) */
-.footer-container {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    border-top: 2px solid #ccc;
-}
-
-.footer-container p {
-    margin: 0;
-    color: #666;
-}
-
-/* Media Queries para tables*/
-@media (min-width: 1200px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+/* ======================================
+    || Reglas Generales y Variables CSS ||
+    ====================================== */
+    :root {
+        /* Tema Claro */
+        --bg-color: #f3e8ff;
+        --text-color: #4a148c;
+        --primary-color: #7e57c2;
+        --card-bg: #fff;
+        --border-color: #d1c4e9;
+        --input-bg: #fff;
+        --placeholder-color: #9575cd;
+        --button-bg: #7e57c2;
+        --button-text: #fff;
+        --delete-button-bg: #e53935;
+        --delete-button-hover: #d32f2f;
     }
-
-    .navegacion-container {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .navegacion-container nav ul {
-        flex-direction: column; /* Apila los elementos del menú */
-        gap: 0.5rem;
-    }
-
-    .nueva-tarea {
-        flex-direction: column;
-    }
-
-    #agregar {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-}
-
-@media (max-width: 992px ){
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navegacion-container {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .navegacion-container nav ul {
-        flex-direction: column; /* Apila los elementos del menú */
-        gap: 0.5rem;
-    }
-
-    .nueva-tarea {
-        flex-direction: column;
-    }
-
-    #agregar {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-}
     
-@media (max-width: 768px ){
-    .navbar {
+    .dark-mode {
+        /* Tema Oscuro */
+        --bg-color: #1a0033;
+        --text-color: #e3f2fd;
+        --primary-color: #9575cd;
+        --card-bg: #30194a;
+        --border-color: #4a148c;
+        --input-bg: #30194a;
+        --placeholder-color: #b39ddb;
+        --button-bg: #9575cd;
+        --button-text: #1a0033;
+        --delete-button-bg: #d32f2f;
+        --delete-button-hover: #c62828;
+    }
+    
+    /* ===============================
+        || Estilos Base y Tipografía ||
+        =============================== */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.5s ease, color 0.5s ease;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
         flex-direction: column;
+    }
+    
+    h1, h2, h3 {
+        font-family: 'Nata Sans', sans-serif;
+        color: var(--text-color);
+        font-weight: 700;
+    }
+    
+    .navbar {
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--text-color);
+    }
+    
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
+    }
+    
+    .menu li a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    .menu li a.active,
+    .menu li a:hover {
+        color: var(--primary-color);
+    }
+    
+    .menu li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+    
+    .menu li a.active::after,
+    .menu li a:hover::after {
+        width: 100%;
+    }
+    
+    main {
+        flex-grow: 1;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
         align-items: flex-start;
+    }
+    
+    .menu-container {
+        max-width: 800px;
+        width: 100%;
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nueva-tarea {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #nueva-nota {
+        flex-grow: 1;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        font-size: 1rem;
+        background-color: var(--input-bg);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        resize: none;
+    }
+    
+    #nueva-nota::placeholder {
+        color: var(--placeholder-color);
+    }
+    
+    #nueva-nota:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.5);
+    }
+    
+    .md3-button {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .md3-button:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .lista-tareas {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tarea {
+        background-color: var(--input-bg);
+        padding: 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .tarea:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+    
+    .btn-circular {
+        background-color: var(--primary-color);
+        color: var(--button-text);
+        border: none;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn-circular:hover {
+        background-color: #673ab7;
+        transform: scale(1.1);
+    }
+    
+    .footer-container {
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--card-bg);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .footer-container p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--text-color);
+    }
+    
+    /* ==================
+        || Animaciones ||
+        ================== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .tarea {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    /* ==================
+        || Responsivo ||
+        ================== */
+    @media (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            gap: 1rem;
+        }
         
+        .menu {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        main {
+            padding: 1rem;
+        }
+        
+        .menu-container {
+            padding: 1.5rem;
+        }
     }
-
-    .navegacion-container {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .navegacion-container nav ul {
-        flex-direction: column; /* Apila los elementos del menú */
-        gap: 0.5rem;
-    }
-
-    .nueva-tarea {
-        flex-direction: column;
-    }
-
-    #agregar {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-}
-
-@media (max-width: 480px ){
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navegacion-container {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .navegacion-container nav ul {
-        flex-direction: column; /* Apila los elementos del menú */
-        gap: 0.5rem;
-    }
-
-    .nueva-tarea {
-        flex-direction: column;
-    }
-
-    #agregar {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-}
