@@ -71,12 +71,12 @@ body {
         padding: 0;
         gap: 1.5rem;
     }
-  
-  .logo img {
+
+    .logo img {
     height: 50px; 
-  }
-  
-  .menu li a {
+    }
+
+    .menu li a {
         text-decoration: none;
         color: var(--text-color);
         font-weight: 500;
