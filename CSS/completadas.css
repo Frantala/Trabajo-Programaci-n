@@ -151,6 +151,11 @@ h1, h2, h3 {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* Fondo de las tareas dentro de "Completadas" igual al contenedor */
+.tareas-completadas .tarea {
+  background: var(--card-bg);
+}
+
 .texto {
   font-size: 1rem;
   font-weight: 500;
@@ -168,6 +173,15 @@ h1, h2, h3 {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-circular:hover {
+  background: var(--primary-light);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -178,6 +192,65 @@ footer {
   padding: 1rem 2rem;
   margin-top: auto;
   box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+/* === Brillo de botones dentro de las tareas (hover estilo md3-button) === */
+.tarea button,
+.tarea .btn,
+.tarea .btn-circular {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto al pasar el mouse */
+.tarea button:hover,
+.tarea .btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para los botones circulares */
+.tarea .btn-circular {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.tarea .btn-circular:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* Botón de eliminar (si lo usas) */
+.tarea .btn-eliminar {
+  background-color: var(--delete-button-bg);
+  color: #fff;
+}
+
+.tarea .btn-eliminar:hover {
+  background-color: var(--delete-button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Accesibilidad: foco visible */
+.tarea button:focus-visible,
+.tarea .btn:focus-visible,
+.tarea .btn-circular:focus-visible,
+.tarea .btn-eliminar:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(126, 87, 194, 0.35);
 }
 
 /* MEDIA QUERIES */
