@@ -1,11 +1,13 @@
 :root {
-  /* Variables de tema claro: colores principales, fondos y botones */
+  /* Tema Claro */
   --bg-color: #f3e8ff;
   --text-color: #4a148c;
   --primary-color: #7e57c2;
   --primary-light: #b39ddb;
   --card-bg: #fff;
   --border-color: #d1c4e9;
+  --input-bg: #fff;
+  --placeholder-color: #9575cd;
   --button-bg: #7e57c2;
   --button-text: #fff;
   --delete-button-bg: #e53935;
@@ -13,13 +15,15 @@
 }
 
 .dark-mode {
-  /* Variables de tema oscuro, sobreescriben las del tema claro */
+  /* Tema Oscuro */
   --bg-color: #1a0033;
   --text-color: #e3f2fd;
   --primary-color: #9575cd;
   --primary-light: #b39ddb;
   --card-bg: #30194a;
   --border-color: #4a148c;
+  --input-bg: #30194a;
+  --placeholder-color: #b39ddb;
   --button-bg: #9575cd;
   --button-text: #1a0033;
   --delete-button-bg: #d32f2f;
@@ -27,79 +31,95 @@
 }
 
 body {
-  /* Estilos generales de página: fuente, colores, layout vertical y transición */
-  margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+h1, h2, h3 {
+  font-family: 'Nata Sans', sans-serif;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
 .navbar {
-  /* Barra superior: layout horizontal, espacio entre items y sombra */
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--primary-light);
-  padding: 0.75rem 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 20px;
 }
 
 .logo {
-  /* Estilo del logo */
-  font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: var(--text-color);
   display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 10px;
 }
 
 .menu {
-  /* Lista de links del menú: horizontal por defecto */
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1rem;
-}
-
-.menu li {
-  min-width: auto;
+  gap: 1.5rem;
 }
 
 .menu a {
-  /* Estilo de los links, con hover */
-  display: block;
   text-decoration: none;
-  font-weight: 500;
   color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+.menu a.active,
 .menu a:hover {
   color: var(--primary-color);
-  background: rgba(126, 87, 194, 0.1);
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menu a.active::after,
+.menu a:hover::after {
+  width: 100%;
 }
 
 .tareas-completadas {
-  /* Contenedor de tareas: centrado, fondo y sombra */
   flex: 1;
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   background: var(--card-bg);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .tareas-completadas h2 {
-  /* Título centrado */
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
@@ -107,7 +127,6 @@ body {
 }
 
 .lista-tareas {
-  /* Lista de tareas: vertical y con separación */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -117,7 +136,6 @@ body {
 }
 
 .tarea {
-  /* Cada tarea: layout horizontal, borde y efecto hover */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,7 +148,7 @@ body {
 
 .tarea:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .texto {
@@ -139,13 +157,11 @@ body {
 }
 
 .acciones {
-  /* Contenedor de botones de acción */
   display: flex;
   gap: 0.5rem;
 }
 
 .btn-circular {
-  /* Botones redondos */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -155,56 +171,25 @@ body {
 }
 
 footer {
-  /* Footer siempre al final */
-  background: var(--primary-light);
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
   color: var(--text-color);
   text-align: center;
   padding: 1rem 2rem;
   margin-top: auto;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
 }
 
-/* MEDIA QUERIES: ajustes según ancho de pantalla */
-@media (min-width: 769px) {
-  /* Menú horizontal en pantallas grandes */
-  .menu {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-  /* Navbar y menú para tablet/móviles grandes */
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
     gap: 1rem;
   }
 
   .menu {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .menu li:last-child {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu li:nth-last-child(2) {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu li:nth-child(2) {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 360px) {
-  .menu li {
-    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
   }
 }
