@@ -265,6 +265,6 @@
     }
 
     .button_music{
-        align-items: right;
-        transform: translateX(400px);
+        display: flex;
+        justify-content: flex-end;
     }
