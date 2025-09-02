@@ -263,3 +263,8 @@
             padding: 1.5rem;
         }
     }
+
+    .button_music{
+        align-items: right;
+        transform: translateX(400px);
+    }
