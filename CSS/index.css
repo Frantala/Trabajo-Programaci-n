@@ -214,6 +214,7 @@
         transform: scale(1.1);
     }
     
+    /* no tocar el footer */
     .footer-container {
         padding: 1.28rem;
         text-align: center;
