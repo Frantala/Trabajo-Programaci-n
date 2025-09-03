@@ -215,7 +215,7 @@
     }
     
     .footer-container {
-        padding: 1rem;
+        padding: 1.28rem;
         text-align: center;
         background-color: var(--card-bg);
         border-top: 1px solid var(--border-color);
