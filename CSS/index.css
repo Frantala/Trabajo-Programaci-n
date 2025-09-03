@@ -1,6 +1,4 @@
-/* ======================================
-    || Reglas Generales y Variables CSS ||
-    ====================================== */
+
     :root {
         /* Tema Claro */
         --bg-color: #f3e8ff;
@@ -213,7 +211,7 @@
         background-color: #673ab7;
         transform: scale(1.1);
     }
-    
+
     /* no tocar el footer */
     .footer-container {
         padding: 1.28rem;
