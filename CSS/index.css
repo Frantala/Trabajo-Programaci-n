@@ -49,7 +49,7 @@
     .navbar {
         background-color: var(--card-bg);
         border-bottom: 1px solid var(--border-color);
-        padding:  2rem;
+        padding:  2.10rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
