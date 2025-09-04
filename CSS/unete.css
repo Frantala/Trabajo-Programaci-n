@@ -272,18 +272,21 @@ input[type="password"] {
 }
 
 .selector{
-    display: block; 
-    text-align: left;
+    display: flex;  
+    text-align: center;
+
 }
 
 .rad{
-    transform: translateY(25px); 
-    margin: 0px;
+    transform: translateY(2px); 
+    margin: 1px;
 }
 
-.title{
+.title
+{
     margin-top: 0px;
-    transform: translateY(23px);
+    transform: translateY(20px);
+
 }
 
 .footer-container {
