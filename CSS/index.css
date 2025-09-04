@@ -65,6 +65,17 @@
         display: flex;
     }
     
+    #dark-mode {
+        background-color: #a375e9;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
     .menu {
         display: flex;
         list-style: none;
