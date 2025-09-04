@@ -14,7 +14,7 @@
         --delete-button-hover: #d32f2f;
     }
     
-    .dark-mode {
+    body.dark-mode {
         /* Tema Oscuro */
         --bg-color: #1a0033;
         --text-color: #e3f2fd;
