@@ -6,3 +6,5 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.height = (this.scrollHeight) + 'px'; // Ajusta la altura a la del contenido
     });
 });
+
+
