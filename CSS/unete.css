@@ -46,6 +46,11 @@ body {
         font-family: 'Nata Sans', sans-serif;
         color: var(--text-color);
         font-weight: 700;
+        text-align: center;
+    }
+    
+    p{
+        text-align: center;
     }
 
 .navbar {
@@ -174,6 +179,7 @@ legend {
     font-weight: 600;
     padding: 0 0.5rem;
     color: var(--text-color);
+    text-align: center;
 }
 
 .pais{

@@ -31,110 +31,64 @@
       </div>
     </header>
     
-    <main class="form-main-container">
-      <div class="form-card">
-        <h1>Formulario de Registro</h1>
-        <p>¿Quieres unirte a nosotros? Por favor, llena el formulario.</p>
-        <form
-          id="registration-form"
-          class="registration-form"
-          action="#"
-          method="POST"
-        >
-          <fieldset class="fieldset">
-            <legend>Datos Personales</legend>
-            <label for="nombre">Ingresa tu primer nombre:</label>
-            <input
-              id="nombre"
-              name="nombre"
-              type="text"
-              class="form-input"
-              required
-            />
+    <main>
+  <div class="menu-container">
+    <h2 class="logo" style="margin-bottom: 8px;">Formulario de Registro</h2>
+    <p>¿Quieres unirte a nosotros? Por favor, llena el formulario.</p>
 
-            <label for="segundo-nombre">Ingresa tu segundo nombre:</label>
-            <input
-              id="segundo-nombre"
-              name="segundo-nombre"
-              placeholder="Opcional"
-              type="text"
-              class="form-input"
-            />
-            <label for="apellido">Ingresa tu apellido:</label>
-            <input
-              id="apellido"
-              name="apellido"
-              type="text"
-              class="form-input"
-              required
-            />
+    <form action="#" method="POST">
+      <fieldset class="fieldset">
+        <legend>Datos Personales</legend>
 
-            <label for="correo">Ingresa tu email:</label>
-            <input
-              id="correo"
-              name="correo"
-              type="email"
-              class="form-input"
-              required
-            />
+        <label for="nombre">Primer nombre:</label>
+        <input id="nombre" name="nombre" type="text" class="form-input" required />
 
-            <label for="telefono"> Ingresa tu telefono</label>
-            <input 
-              id="telefono"
-              name="telefono"
-              type="tel"
-              class="form-input"
-              required
-            />
+        <label for="segundo-nombre">Segundo nombre:</label>
+        <input id="segundo-nombre" name="segundo-nombre" placeholder="Opcional" type="text" class="form-input" />
 
-            <label for="fecha de Nacimiento"> Ingresa tu fecha de Nacimiento </label>
-            <input 
-              id="fechaNacimiento"
-              name="fechaNacimiento"
-              type="date"
-              class="form-input"
-              required
-            />
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" name="apellido" type="text" class="form-input" required />
 
-            <label for="pais" >Pais </label> 
-            <select id="Pais" name="Pais" class="pais" required> 
-                <option value="">Selecciona un país</option>
-                <option value="ar">Argentina</option>
-                <option value="mx">Paraguay</option>
-                <option value="es">Brasil</option>
-                <option value="Cl">Chile</option>
-                <option value="CO">Colombia</option>
-                <option value="cl">Venezuela</option>
-                <option value="BO">Bolivia</option>
-                <option value="Pe">Peru</option>
-                <option value="Ur">Uruguay</option>
-            </select>
+        <label for="correo">Email:</label>
+        <input id="correo" name="correo" type="email" class="form-input" required />
 
-            <div class="checkbox"> 
-              <label for="chequeo">
-                <input id="terminos y condiciones" type="checkbox"  required name="terminos y condiciones"/> Acepto los <a href="terminosYcondiciones.html">terminos y condiciones</a> 
-              </label>
-            </div>
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" name="telefono" type="tel" class="form-input" required />
 
-            <p class="title">Tipo de Experiencia</p>
-            <div class="radio">
-              <label class="selector"> 
-                <input type="radio" name="rol" value="principiante" class="rad" required> Principiante</label>
-              <label class="selector">
-                <input type="radio" name="rol" value="intermedio" class="rad"> Intermedio</label>
-              <label class="selector">
-                <input type="radio" name="rol" value="avanzado" class="rad"> Avanzado</label>
-            </div>
-              
-            
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-input" required />
 
-            <button style="margin-top: 20px;" type="submit" class="submit-btn md3-button">
-              Regístrate
-            </button>
-          </fieldset>
-        </form>
-      </div>
-    </main>
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" class="form-input" required>
+          <option value="">Selecciona un país</option>
+          <option value="ar">Argentina</option>
+          <option value="py">Paraguay</option>
+          <option value="br">Brasil</option>
+          <option value="cl">Chile</option>
+          <option value="co">Colombia</option>
+          <option value="ve">Venezuela</option>
+          <option value="bo">Bolivia</option>
+          <option value="pe">Perú</option>
+          <option value="uy">Uruguay</option>
+        </select>
+
+        <label>
+          <input type="checkbox" required />
+          Acepto los <a href="terminosYcondiciones.html">términos y condiciones</a>
+        </label>
+
+        <p class="title">Tipo de experiencia</p>
+        <div class="radio">
+          <label><input type="radio" name="rol" value="principiante" required /> Principiante</label>
+          <label><input type="radio" name="rol" value="intermedio" /> Intermedio</label>
+          <label><input type="radio" name="rol" value="avanzado" /> Avanzado</label>
+        </div>
+
+        <button type="submit" class="submit-btn md3-button">Regístrate</button>
+      </fieldset>
+    </form>
+  </div>
+</main>
 
     <div class="footer-container">
       <footer>

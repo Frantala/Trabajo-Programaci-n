@@ -36,83 +36,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.8;
   transition: background-color 0.4s ease, color 0.4s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-
-header {
-  background-color: var(--card-bg);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 0.90rem ;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.nav {
-        background-color: var(--card-bg);
-        border-bottom: 1px solid var(--border-color);
-        padding: 0.5rem 0.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        gap: 2px;
-    }
-    
-
-nav h2 {
-  color: var(--text-color);
-  font-size: 1.5rem;
-  font-weight: 900;
-  transform: translateX(168px);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-  
-}
-
-nav ul li a {
-  position: relative;
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--primary-color);
-  transition: width 0.3s ease;
-}
-
-nav ul li a.active::after,
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-
-main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 1rem;
-  flex-grow: 1;
 }
 
 h1, h2, h3 {
@@ -123,43 +51,122 @@ h1, h2, h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* ==== TARJETAS ==== */
-section.contenido {
-  background: var(--card-bg);
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  color: var(--primary-color);
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menu li a.active::after,
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* ==== CONTENIDO PRINCIPAL ==== */
+main {
+  flex-grow: 1;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--card-bg);
   border-radius: 1rem;
+  padding: 2rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ==== PIE DE PÁGINA ==== */
-footer {
+/* ==== FOOTER ==== */
+.footer-container {
+  padding: 1.28rem;
   text-align: center;
   background-color: var(--card-bg);
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: var(--text-color);
   border-top: 1px solid var(--border-color);
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  transform: translateY(-14px);
+}
+
+.button_music {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ==== RESPONSIVE ==== */
 @media (max-width: 600px) {
-  nav {
+  .navbar {
     flex-direction: column;
-    gap: 0rem;
-    
+    gap: 1rem;
   }
-  nav ul {
+
+  .menu {
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.6rem;
     align-items: center;
   }
-}
 
-p {
-  margin-bottom: 1.5rem; /* más espacio entre párrafos */
-  line-height: 1.8;      /* aumenta el interlineado para que se lea más cómodo */
+  main {
+    padding: 1rem;
+  }
+
+  .menu-container {
+    padding: 1.5rem;
+
+  } 
 }
