@@ -14,3 +14,8 @@ window.addEventListener("storage", (e) => {
   }
 });
 
+const oscuro = localStorage.getItem("theme");
+if(oscuro === "dark")
+{
+    document.body.classList.add("dark-mode");
+}
