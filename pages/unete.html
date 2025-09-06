@@ -20,9 +20,9 @@
     <h2 class="logo">Notas</h2>
     <ul class="menu">
       <li><a href="/index.html">Inicio</a></li>
-      <li><a href="/pages/completadas.html" class="active">Completadas</a></li>
+      <li><a href="/pages/completadas.html" >Completadas</a></li>
       <li><a href="/pages/sobre-nosotros.html">Sobre Nosotros</a></li>
-      <li><a href="/pages/unete.html">Únete a Nosotros</a></li>
+      <li><a href="/pages/unete.html" class="active">Únete a Nosotros</a></li>
       <li>
         <button id="dark_mode" onclick="cambiarModo()">
           <span class="material-symbols-outlined">dark_mode</span>
@@ -72,11 +72,13 @@
           <option value="pe">Perú</option>
           <option value="uy">Uruguay</option>
         </select>
-
-        <label>
+        <div class="checkbox-container"> 
+          <label>
           <input type="checkbox" required />
           Acepto los <a href="terminosYcondiciones.html">términos y condiciones</a>
         </label>
+        </div>
+        
 
         <p class="title">Tipo de experiencia</p>
         <div class="radio">
