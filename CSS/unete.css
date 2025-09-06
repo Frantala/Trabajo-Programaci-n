@@ -111,6 +111,9 @@ body {
         width: 100%;
     }
 
+    .menu, button {
+       border-style: none;
+    }
 .form-main-container {
     display: flex;
     justify-content: center;

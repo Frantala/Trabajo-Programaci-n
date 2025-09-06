@@ -115,6 +115,10 @@
         width: 100%;
     }
     
+    .menu, button {
+        border-style: none;
+        
+    }
 
     main {
         flex-grow: 1;
