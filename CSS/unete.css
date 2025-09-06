@@ -53,6 +53,20 @@ body {
         text-align: center;
     }
 
+.submit-btn-md3-button{    
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+    
+
 .navbar {
         background-color: var(--card-bg);
         border-bottom: 1px solid var(--border-color);

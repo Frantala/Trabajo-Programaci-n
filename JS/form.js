@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => { 
 const form = document.getElementById("form");
-const boton = document.querySelector(".submit-btn md3-button");
+const boton = document.querySelector(".submit-btn-md3-button");
 
 boton.addEventListener("click", () => {
     const datos = {
