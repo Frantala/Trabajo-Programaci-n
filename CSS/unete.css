@@ -78,9 +78,7 @@ body {
         gap: 1.5rem;
     }
 
-    .logo img {
-    height: 50px; 
-    }
+    
 
     .menu li a {
         text-decoration: none;

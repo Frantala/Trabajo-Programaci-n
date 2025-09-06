@@ -54,23 +54,24 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* ==== NAVBAR ==== */
 .navbar {
-  background-color: var(--card-bg);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  gap: 20px;
-}
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        padding:  2.10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        gap: 20px;
+    }
+
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--text-color);
-}
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text-color);
+    }
+
 
 .menu {
   display: flex;
@@ -122,6 +123,7 @@ main {
 .menu-container {
   max-width: 800px;
   width: 100%;
+  margin: 0 auto;
   background-color: var(--card-bg);
   border-radius: 1rem;
   padding: 2rem;

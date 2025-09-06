@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notas Completadas</title>
-  <link rel="stylesheet" href="/CSS/completadas.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notas Completadas | StoreRoom</title>
+
+  <link rel="stylesheet" href="/CSS/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
 </head>
-<body>
-  <script src="/JS/dark-light.js"></script>
-     
-  <header>
-    
-    <nav class="navbar">
-      <h2 class="logo">Notas</h2>
-      <ul class="menu">
-        <li><a href="/index.html" class="link-inicio">Inicio</a></li>
-        <li><a href="/pages/completadas.html" class="link-completadas active">Completadas</a></li>
-        <li><a href="/pages/sobre-nosotros.html" class="link-sobre">Sobre nosotros</a></li>
-        <li><a href="/pages/unete.html" class="link-unete">Únete a nosotros</a></li>
-        <li>
-          <button id="dark_mode" onclick="cambiarModo()"><span class="material-symbols-outlined">dark_mode</span></button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+
+<script src="/JS/dark-light.js"></script>
+<body class="light-mode">
+ <header>
+  <nav class="navbar">
+    <h2 class="logo">Notas</h2>
+    <ul class="menu">
+      <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/pages/completadas.html" class="active">Completadas</a></li>
+      <li><a href="/pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="/pages/unete.html">Únete a Nosotros</a></li>
+      <li>
+        <button id="dark_mode" onclick="cambiarModo()">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <main>
-    <section class="tareas-completadas">
-      <h2>Notas completadas</h2>
-
+    <div class="menu-container">
+      <h2 class="logo">Notas Completadas</h2>
       <ul class="lista-tareas">
         <li class="tarea">
           <span class="texto">Ejemplo 1</span>
@@ -41,7 +42,6 @@
             <button class="btn-circular" title="Borrar">B</button>
           </div>
         </li>
-
         <li class="tarea">
           <span class="texto">Ejemplo 2</span>
           <div class="acciones">
@@ -49,7 +49,6 @@
             <button class="btn-circular" title="Borrar">B</button>
           </div>
         </li>
-
         <li class="tarea">
           <span class="texto">Ejemplo 3</span>
           <div class="acciones">
@@ -58,13 +57,18 @@
           </div>
         </li>
       </ul>
-    </section>
+    </div>
   </main>
-<div class="footer-container">
-  <footer>
-    <p>Derechos de autor</p>
-  </footer>
-</div>
 
+  <div class="footer-container">
+    <footer>
+      <div class="button_music">
+        <button id="musicBtn">▶️ música</button>
+        <audio id="bgMusic" src="/files/la-pagina-de-tareas-song.mp3" loop></audio>
+      </div>
+      <p>Derechos de autor</p>
+    </footer>
+  </div>
+
+  <script src="/JS/music.js"></script>
 </body>
-</html>
