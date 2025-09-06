@@ -7,7 +7,7 @@ boton.addEventListener("click", () => {
       nombre: document.getElementById("nombre").value,
       correo: document.getElementById("correo").value,
       pais: document.getElementById("pais").value,
-      tipo_experiencia: document.querySelector("expe").value,
+      tipo_experiencia: document.getElementById("expe").value,
       Fecha_Nac: document.getElementById("fechaNacimiento").value,
       telefono: document.getElementById("telefono").value,
       apellido: document.getElementById("apellido").value,
