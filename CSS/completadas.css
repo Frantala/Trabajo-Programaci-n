@@ -70,37 +70,44 @@ h1, h2, h3 {
   display: flex;
   list-style: none;
   gap: 1.5;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
 }
 
 .menu li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: color 0.3s ease;
-}
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    .menu li a.active,
+    .menu li a:hover {
+        color: var(--primary-color);
+    }
+    
+    .menu li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+    
+    .menu li a.active::after,
+    .menu li a:hover::after {
+        width: 100%;
+    }
 
-.menu li a.active,
-.menu li a:hover {
-  color: var(--primary-color);
-}
-
-.menu li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--primary-color);
-  transition: width 0.3s ease;
-}
-
-.menu li a.active::after,
-.menu li a:hover::after {
-  width: 100%;
-}
+    .menu, button {
+       border-style: none;
+    }
 
 /* === CONTENIDO PRINCIPAL === */
 main {
