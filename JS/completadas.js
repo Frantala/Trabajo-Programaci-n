@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const listaCompletadas = document.querySelector('.lista-completadas');
+
+    const listaCompletadas = document.querySelector('.lista-tareas');
 
     function obtenerCompletadas() {
         return JSON.parse(localStorage.getItem("tareasCompletadas")) || [];
