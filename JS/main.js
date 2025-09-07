@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textarea = document.getElementById('nueva-nota');
     const botonAgregar = document.getElementById('agregar');
     const lista = document.querySelector('.lista-tareas');
+    //const botonTilde = this.documentElement.getElementById("btn-circular");
     const botonBorrar = document.getElementById('Borrar');
 
     // Ajuste automático del textarea
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         tareas.forEach((tarea, idx) => {
             const li = document.createElement("li");
             li.className = "tarea-item";
+            const botonTilde = document.createElement("button");
+            botonTilde.className = "btn-circular";
+            botonTilde.textContent = "✔️";
             const span = document.createElement("span");
             span.textContent = tarea;
             li.appendChild(span);
