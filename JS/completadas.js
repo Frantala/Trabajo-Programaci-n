@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const completadas = obtenerCompletadas();
         completadas.forEach(tarea => {
         const li = document.createElement("li");
-        li.className = "lista-tareas";
+        li.className = "tarea";
         li.textContent = tarea;
         listaCompletadas.appendChild(li);
         });

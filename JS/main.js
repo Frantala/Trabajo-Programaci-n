@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const botonAgregar = document.getElementById('agregar');
     const lista = document.querySelector('.lista-tareas');
     const botonBorrar = document.getElementById('Borrar');
-    const listaCompletadas = document.querySelector('.lista-completadas'); // Debes tener este elemento en tu HTML
+    const listaCompletadas = document.querySelector('.lista-tareas'); // Debes tener este elemento en tu HTML
 
     // Ajuste automático del textarea
     textarea.addEventListener('input', function() {
