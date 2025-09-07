@@ -40,11 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
             li.className = "tarea-item";
             const botonTilde = document.createElement("button");
             botonTilde.className = "btn-circular";
-            botonTilde.textContent = "✔️";
+            botonTilde.textContent = "✔";
+            botonTilde.style.display= "inline-block";
+            botonTilde.style.marginRight= "20px";
             const span = document.createElement("span");
             span.textContent = tarea;
+            
+            li.appendChild(botonTilde);
             li.appendChild(span);
             lista.appendChild(li);
+            
         });
     }
 
