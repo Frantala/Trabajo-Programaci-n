@@ -92,5 +92,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     mostrarTareas();
-    mostrarCompletadas();
 });
