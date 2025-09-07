@@ -66,9 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     botonBorrar.addEventListener("click", function() { 
-        const tarea = 
-        
-        localStorage.setItem("tareas", JSON.stringify(tareas));
+        const tarea =  localStorage.setItem("tareas", JSON.stringify(tareas));
     })
     
 
@@ -77,4 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
+botonTilde.addEventListener("click", function() {
+    const tareaCompletada = localStorage.setItem("marcadaCompletada");
+    
+})
