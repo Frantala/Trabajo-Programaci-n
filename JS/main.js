@@ -8,3 +8,54 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const textarea = document.getElementById('nueva-nota');
+    const botonAgregar = document.getElementById('agregar');
+    const lista = document.querySelector('.lista-tareas');
+
+    // Ajuste automático del textarea
+    textarea.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+
+    // Recuperar tareas del localStorage
+    function TareasGuardadas() {
+        return JSON.parse(localStorage.getItem("tareas")) || [];
+    }
+
+    // Guardar tareas en localStorage
+    function guardarNotas(tareas) {
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+    }
+
+    // Mostrar tareas en la lista
+    function mostrarTareas() {
+        lista.innerHTML = "";
+        const tareas = TareasGuardadas();
+        tareas.forEach((tarea, idx) => {
+            const li = document.createElement("li");
+            li.className = "tarea-item";
+            const span = document.createElement("span");
+            span.textContent = tarea;
+            li.appendChild(span);
+            lista.appendChild(li);
+        });
+    }
+
+    // Agregar nueva tarea
+    botonAgregar.addEventListener("click", function() {
+        const tarea = textarea.value.trim();
+        if (tarea) {
+            const tareas = TareasGuardadas();
+            tareas.push(tarea);
+            guardarNotas(tareas);
+            textarea.value = "";
+            mostrarTareas();
+        }
+    });
+
+    mostrarTareas();
+});
+
+
