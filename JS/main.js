@@ -78,18 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mostrar tareas completadas
-    function mostrarCompletadas() {
-        if (!listaCompletadas) return;
-        listaCompletadas.innerHTML = "";
-        const completadas = TareasCompletadasGuardadas();
-        completadas.forEach((tarea) => {
-            const li = document.createElement("li");
-            li.className = "tarea-completada";
-            li.textContent = tarea;
-            listaCompletadas.appendChild(li);
-        });
-    }
 
     // Agregar nueva tarea
     botonAgregar.addEventListener("click", function() {
