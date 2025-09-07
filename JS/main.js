@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     botonBorrar.addEventListener("click", function() { 
         const tarea = 
-
+        
         localStorage.setItem("tareas", JSON.stringify(tareas));
     })
     
