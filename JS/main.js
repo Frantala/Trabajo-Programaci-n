@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textarea = document.getElementById('nueva-nota');
     const botonAgregar = document.getElementById('agregar');
     const lista = document.querySelector('.lista-tareas');
+    const botonBorrar = document.getElementById('Borrar');
 
     // Ajuste automático del textarea
     textarea.addEventListener('input', function() {
@@ -55,7 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    botonBorrar.addEventListener("click", function() { 
+        const tarea = 
+
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+    })
+    
+
     mostrarTareas();
+
+
 });
 
 
