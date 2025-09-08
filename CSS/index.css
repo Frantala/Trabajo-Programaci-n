@@ -64,7 +64,17 @@
         color: var(--text-color);
         
     }
-    
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px; 
+    }
+
+    .logo-img {
+        width: 40px;
+        height: auto;
+    }    
     #dark-mode {
         background-color: #a375e9;
         color: white;
