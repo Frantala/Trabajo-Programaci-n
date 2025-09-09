@@ -1,341 +1,357 @@
 
     :root {
-        /* Tema Claro */
-        --bg-color: #f3e8ff;
-        --text-color: #4a148c;
-        --primary-color: #7e57c2;
-        --card-bg: #fff;
-        --border-color: #d1c4e9;
-        --input-bg: #fff;
-        --placeholder-color: #9575cd;
-        --button-bg: #7e57c2;
-        --button-text: #fff;
-        --delete-button-bg: #e53935;
-        --delete-button-hover: #d32f2f;
-    }
-    
-    body.dark-mode {
-        /* Tema Oscuro */
-        --bg-color: #1a0033;
-        --text-color: #e3f2fd;
-        --primary-color: #9575cd;
-        --card-bg: #30194a;
-        --border-color: #4a148c;
-        --input-bg: #30194a;
-        --placeholder-color: #b39ddb;
-        --button-bg: #9575cd;
-        --button-text: #1a0033;
-        --delete-button-bg: #d32f2f;
-        --delete-button-hover: #c62828;
-    }
-    
-    body {
-        font-family: 'Montserrat', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        transition: background-color 0.5s ease, color 0.5s ease;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    h1, h2, h3 {
-        font-family: 'Nata Sans', sans-serif;
-        color: var(--text-color);
-        font-weight: 700;
-    }
-    
-    .navbar {
-        background-color: var(--card-bg);
-        border-bottom: 1px solid var(--border-color);
-        padding:  2.10rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        gap: 20px;
-    }
+  /* Tema Claro */
+  --bg-color: #f3e8ff;
+  --text-color: #4a148c;
+  --primary-color: #7e57c2;
+  --card-bg: #fff;
+  --border-color: #d1c4e9;
+  --input-bg: #fff;
+  --placeholder-color: #9575cd;
+  --button-bg: #7e57c2;
+  --button-text: #fff;
+  --delete-button-bg: #e53935;
+  --delete-button-hover: #d32f2f;
+}
+
+body.dark-mode {
+  /* Tema Oscuro */
+  --bg-color: #1a0033;
+  --text-color: #e3f2fd;
+  --primary-color: #9575cd;
+  --card-bg: #30194a;
+  --border-color: #4a148c;
+  --input-bg: #30194a;
+  --placeholder-color: #b39ddb;
+  --button-bg: #9575cd;
+  --button-text: #1a0033;
+  --delete-button-bg: #d32f2f;
+  --delete-button-hover: #c62828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'Nata Sans', sans-serif;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+/* Adaptación para título principal en sobre-nosotros.html */
+main h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: 'Nata Sans', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.navbar {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2.10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-color);
+  font-family: 'Nata Sans', sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 55px;
+  height: auto;
+}
+
+#dark-mode {
+  background-color: #a375e9;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  color: var(--primary-color);
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menu li a.active::after,
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu, button {
+  border-style: none;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Adaptación para contenido textual */
+main p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+main ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+main ul li {
+  margin-bottom: 0.5rem;
+}
+
+.nueva-tarea {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#nueva-nota {
+  flex-grow: 1;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+#nueva-nota::placeholder {
+  color: var(--placeholder-color);
+}
+
+#nueva-nota:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.5);
+}
+
+.md3-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.md3-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tarea {
+  background-color: var(--input-bg);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.tarea:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.btn-circ,
+.btn-circular {
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-circ:hover,
+.btn-circular:hover {
+  background-color: #673ab7;
+  transform: scale(1.1);
+}
+
+.footer-container {
+  padding: 1.28rem;
+  text-align: center;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  transform: translateY(-14px);
+}
+
+.button_music {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+#musicBtn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#Borrar {
+  background-color: #4a148c;
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 
-    .logo {
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: var(--text-color);
-        
-    }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 12px; 
-    }
-
-    .logo-img {
-        width: 55px;
-        height: auto;
-    }    
-
-    
-    #dark-mode {
-        background-color: #a375e9;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    #musicBtn {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    }
-    
-    .btn-circ {
-    background-color: var(--primary-color);
-    color: var(--button-text);
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
+  .menu {
+    flex-direction: column;
+    gap: 0.3rem;
     align-items: center;
-    }
+  }
 
-    .btn-circ:hover {
-    background-color: #673ab7;
-    transform: scale(1.1);
-    }
+  main {
+    padding: 1rem;
+  }
 
+  .menu-container {
+    padding: 1.5rem;
+  }
 
-    .menu {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 1.5rem;
-        
-    }
-    
-    .menu li a {
-        text-decoration: none;
-        color: var(--text-color);
-        font-weight: 500;
-        padding: 0.5rem 0;
-        position: relative;
-        transition: color 0.3s ease;
-    }
-    
-    .menu li a.active,
-    .menu li a:hover {
-        color: var(--primary-color);
-    }
-    
-    .menu li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: var(--primary-color);
-        transition: width 0.3s ease;
-    }
-    
-    .menu li a.active::after,
-    .menu li a:hover::after {
-        width: 100%;
-    }
-    
-    .menu, button {
-        border-style: none;
-        
-    }
+  .logo-img {
+    width: 45px;
+  }
 
-    main {
-        flex-grow: 1;
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    
-    .menu-container {
-        max-width: 800px;
-        width: 100%;
-        background-color: var(--card-bg);
-        border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    
-    .nueva-tarea {
-        display: flex;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    #nueva-nota {
-        flex-grow: 1;
-        border: 1px solid var(--border-color);
-        border-radius: 0.5rem;
-        padding: 0.75rem;
-        font-size: 1rem;
-        background-color: var(--input-bg);
-        color: var(--text-color);
-        transition: all 0.3s ease;
-        resize: none;
-    }
-    
-    #nueva-nota::placeholder {
-        color: var(--placeholder-color);
-    }
-    
-    #nueva-nota:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.5);
-    }
-    
-    .md3-button {
-        background-color: var(--button-bg);
-        color: var(--button-text);
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    
-    .md3-button:hover {
-        background-color: var(--primary-color);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    .lista-tareas {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .tarea {
-        background-color: var(--input-bg);
-        padding: 1rem;
-        border-radius: 0.75rem;
-        border: 1px solid var(--border-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.3s ease;
-    }
-    
-    .tarea:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-    }
-    
-    .btn-circular {
-        background-color: var(--primary-color);
-        color: var(--button-text);
-        border: none;
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .btn-circular:hover {
-        background-color: #673ab7;
-        transform: scale(1.1);
-    }
+  .logo {
+    font-size: 1.25rem;
+  }
 
-    /* no tocar el footer */
-    .footer-container {
-        padding: 1.28rem;
-        text-align: center;
-        background-color: var(--card-bg);
-        border-top: 1px solid var(--border-color);
-    }
-    
-    .footer-container p {
-        margin: 0;
-        font-size: 0.875rem;
-        color: var(--text-color);
-        transform: translateY(-14px)
-    }
-    
-    /* ==================
-        || Animaciones ||
-        ================== */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .tarea {
-        animation: fadeIn 0.5s ease-out forwards;
-    }
-    
-    /* ==================
-        || Responsivo ||
-        ================== */
-    @media (max-width: 600px) {
-        .navbar {
-            flex-direction: column;
-            gap: 1rem;  
-            
-        }
-        
-        .menu {
-            flex-direction: column;
-            gap: 0.3rem;
-            align-items: center;
-        }
-        
-        main {
-            padding: 1rem;
-        }
-        
-        .menu-container {
-            padding: 1.5rem;
-        }
-    }
+  main h1 {
+    font-size: 1.25rem;
+  }
 
-    .button_music{
-        display: flex;
-        justify-content: flex-end;
-    }
+  #musicBtn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
 
-    #Borrar{
-        background-color: #4a148c;
-        color: var(--button-text);
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    
-    
+  .footer-container p {
+    font-size: 0.75rem;
+  }
+}
