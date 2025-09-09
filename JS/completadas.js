@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             botonBorrar.addEventListener("click", () => {
             const tareas = obtenerCompletadas(); //llamo a la tarea del inicio que se mandaron
-            tareas.splice(index, 1);
+            tareas.splice(index, 1); //elimina de tareas el elemento donde esta el boton
             localStorage.setItem("tareasCompletadas", JSON.stringify(tareas));
             mostrarCompletadas();
             });
