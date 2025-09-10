@@ -459,44 +459,118 @@ input[type="password"] {
 
 /*diseño responsivo para todas las pantallas*/
 
-@media (max-width: 600px) {
+
+/*para PC (Desktop >1200px)  */
+  
+@media (min-width: 1200px) {
+  .menu-container {
+    padding: 3rem;
+    max-width: 1000px;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+}
+
+/* para Laptop (≥992px <1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menu-container {
+    padding: 2.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu li a {
+    font-size: 0.95rem;
+  }
+}
+
+/* para Tablet (≥768px <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
   }
 
   .menu {
     flex-direction: column;
-    gap: 0.3rem;
-    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  main {
-    padding: 1rem;
+  .menu li a {
+    font-size: 1rem;
+    padding: 0.75rem 0;
+  }
+
+  .logo-img {
+    width: 48px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}
+
+/* para Celular (<480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .menu li a {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+
+  .logo-img {
+    width: 40px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    text-align: center;
   }
 
   .menu-container {
     padding: 1.5rem;
   }
 
-  .logo-img {
-    width: 45px;
+  .submit-btn-md3-button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 
-  .logo {
-    font-size: 1.25rem;
+  .fieldset {
+    padding: 1.5rem;
   }
 
-  main h1 {
-    font-size: 1.25rem;
+  .radio {
+    gap: 0.75rem;
+  }
+
+  .footer-container p {
+    font-size: 0.75rem;
   }
 
   #musicBtn {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
-  }
-
-  .footer-container p {
-    font-size: 0.75rem;
   }
 }
