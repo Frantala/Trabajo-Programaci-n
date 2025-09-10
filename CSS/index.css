@@ -436,26 +436,6 @@ input[type="password"] {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-@media (max-width: 600px) {
-  .fieldset {
-    padding: 1.5rem;
-  }
-
-  .submit-btn-md3-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  .radio {
-    gap: 0.75rem;
-  }
-
-  .menu-container .logo {
-    font-size: 1.25rem;
-  }
-}
-
 /*diseño responsivo para todas las pantallas*/
 
 /*para PC (Desktop >1200px)  */
