@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const textarea = document.getElementById('nueva-nota');
     const botonAgregar = document.getElementById('agregar');
