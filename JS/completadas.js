@@ -9,23 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
     listaCompletadas.innerHTML = "";
     const completadas = obtenerCompletadas();
 
-    completadas.forEach((tarea, index) => {
+    completadas.forEach((tarea, index) => {  //estilo para alinear el texto y botones
       const li = document.createElement("li");
       li.className = "tarea";
       li.style.display = "flex";
       li.style.justifyContent = "space-between";
       li.style.alignItems = "center";
 
+      //muestra el texto de la tarea
       const span = document.createElement("span");
       span.textContent = tarea;
 
+      //creo el boton de borrar
       const botonBorrar = document.createElement("button");
       botonBorrar.textContent = "X";
       botonBorrar.className = "btn-circ";
       botonBorrar.style.marginLeft = "10px";
 
       botonBorrar.addEventListener("click", () => {
-        const tareas = obtenerCompletadas();
+        const tareas = obtenerCompletadas(); 
         tareas.splice(index, 1);
         localStorage.setItem("tareasCompletadas", JSON.stringify(tareas));
         mostrarCompletadas();
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
           tareas[index] = input.value.trim();
           localStorage.setItem("tareasCompletadas", JSON.stringify(tareas));
           mostrarCompletadas();
-        }, { once: true });
+        }, { once: true }); // once: true para asegurar que se ejecute una sola vez
       });
 
       //creo un div para poder poner los dos botones a la derecha juntos
