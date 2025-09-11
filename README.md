@@ -61,3 +61,32 @@ por lo que son locales a tu dispositivo y se borran al limpiar la memoria del na
 
 4) Capturas de pantalla
 
+Breve tutorial de como usar la pagina:
+
+Paso 1: Damos click a el espacio indicado y escribimos la nota que desea guardar. Una vez escrita presionamos el botón agregar.
+
+![Inicio](/assets/capturas/INDEX.png)
+
+Paso 2: Presionamos el botón con un tilde para guardar la nota.
+
+![Inicio](/assets/capturas/INDEX2.png)
+
+Paso 3: Nos dirigimos a la sección "Completadas", donde podremos ver las notas agregadas y si desea borrarla, simplemente presione el botón con una cruz.
+
+![Completadas](/assets/capturas/Completadas.png)
+
+Extras:
+
+Podemos cambiar el tema de la pagina al presionar el botón que se encuentra en la esquina superior derecha y podemos reproducir musica mientras utilizamos la pagina con el botón ubicado en la esquina inferior derecha.
+
+![Completadas](/assets/capturas/INDEX3.png)
+
+Nosotros:
+
+Puedes ingresar a la sección "Sobre Nosotros" para obtener información extra sobre la aplicación y conocer a los creadores.
+
+![SobreNosotros](/assets/capturas/SobreNosotros.png)
+
+Ademas si te interesa el proyecto, puedes tener la oportunidad de unirte a nosotros en la sección "Únete a Nosotros", donde deberas rellenar un formulario que luego será revisado por nuestro equipo.
+
+![UneteANosotros](/assets/capturas/UneteANosotros.png)
