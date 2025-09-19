@@ -1,4 +1,3 @@
-
 :root {
   --bg-color: #f3e8ff;
   --text-color: #4a148c;
@@ -33,6 +32,8 @@ body.dark-mode {
   box-sizing: border-box;
 }
 
+/* --- Estilos Base (Mobile-first) --- */
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
@@ -58,24 +59,16 @@ main h1 {
   margin-bottom: 1.5rem;
 }
 
-/*encabezado de todas las pestañas*/
-
+/* Encabezado de todas las pestañas */
 .navbar {
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 2.10rem;
+  padding: 1.5rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  gap: 20px;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--text-color);
-  font-family: 'Nata Sans', sans-serif;
+  gap: 1.5rem;
 }
 
 .logo-container {
@@ -85,8 +78,16 @@ main h1 {
 }
 
 .logo-img {
-  width: 55px;
+  width: 40px;
   height: auto;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-color);
+  font-family: 'Nata Sans', sans-serif;
+  text-align: center;
 }
 
 #dark-mode {
@@ -102,19 +103,22 @@ main h1 {
 
 .menu {
   display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .menu li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
-  padding: 0rem 0;
+  padding: 1rem 0;
   position: relative;
   transition: color 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .menu li a.active,
@@ -155,12 +159,11 @@ main {
   width: 100%;
   background-color: var(--card-bg);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* cuerpo de todas las pestañas*/
-
+/* Cuerpo de todas las pestañas */
 main p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -175,7 +178,7 @@ main ul li {
   margin-bottom: 0.5rem;
 }
 
-/*clases de las tareas/notas completadas.html y index.html*/
+/* Clases de las tareas/notas completadas.html y index.html */
 .nueva-tarea {
   display: flex;
   gap: 0.5rem;
@@ -269,8 +272,7 @@ main ul li {
   transform: scale(1.1);
 }
 
-/*pie de pagina de cada pestaña*/
-
+/* Pie de página de cada pestaña */
 .footer-container {
   padding: 1.28rem;
   text-align: center;
@@ -311,14 +313,13 @@ main ul li {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/*animaciones*/
-
+/* Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* clases del unete.css */
+/* Clases del unete.css */
 .menu-container .logo {
   margin-bottom: 1rem;
   text-align: center;
@@ -327,7 +328,6 @@ main ul li {
 .menu-container p {
   text-align: center;
 }
-
 
 .registration-form {
   display: flex;
@@ -386,7 +386,6 @@ input[type="password"] {
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .checkbox-container {
   display: flex;
   justify-content: center;
@@ -403,7 +402,6 @@ input[type="password"] {
   gap: 0.5rem;
 }
 
-
 .title {
   margin-top: 0px;
   transform: translateY(20px);
@@ -416,7 +414,6 @@ input[type="password"] {
   flex-direction: column;
   gap: 1rem;
 }
-
 
 .submit-btn-md3-button {
   background: var(--primary-color);
@@ -436,119 +433,57 @@ input[type="password"] {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/*diseño responsivo para todas las pantallas*/
+/* --- Diseño Responsivo --- */
 
-/*para PC (Desktop >1200px)  */
+/* Adaptaciones para Tablet (> 480px) */
+@media (min-width: 481px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.10rem;
+    gap: 20px;
+  }
   
-@media (min-width: 1200px) {
-  .menu-container {
-    padding: 3rem;
-    max-width: 1000px;
-  }
-
-  .logo {
-    font-size: 1.75rem;
-  }
-
-  .menu li a {
-    font-size: 1rem;
-  }
-}
-
-/* para Laptop (≥992px <1200px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .menu-container {
-    padding: 2.5rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .menu li a {
-    font-size: 0.95rem;
-  }
-}
-
-/* para Tablet (≥768px <992px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
   .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .menu li a {
-    font-size: 1rem;
-    padding: 0.75rem 0;
-  }
-
-  .logo-img {
-    width: 48px;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-  }
-}
-
-/* para Celular (<480px) */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .menu {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1.5rem;
   }
-
-  .menu li a {
-    font-size: 1.1rem;
-    padding: 1rem 0;
-  }
-
+  
   .logo-img {
-    width: 40px;
+    width: 55px;
   }
-
+  
   .logo {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.5rem;
   }
-
-  .menu-container {
-    padding: 1.5rem;
-  }
-
-  .submit-btn-md3-button {
+  
+  .menu li a {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 0rem 0;
   }
+}
 
-  .fieldset {
-    padding: 1.5rem;
+/* Adaptaciones para Laptop (> 992px) */
+@media (min-width: 992px) {
+  .menu-container {
+    padding: 2.5rem;
+    max-width: 1000px;
   }
-
-  .radio {
-    gap: 0.75rem;
+  
+  .logo {
+    font-size: 1.75rem;
   }
-
-  .footer-container p {
-    font-size: 0.75rem;
+  
+  .menu li a {
+    font-size: 1rem;
   }
+}
 
-  #musicBtn {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+/* Adaptaciones para PC (> 1200px) */
+@media (min-width: 1200px) {
+  .menu-container {
+    padding: 3rem;
   }
 }
