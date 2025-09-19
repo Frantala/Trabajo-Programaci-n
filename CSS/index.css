@@ -50,7 +50,6 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/* Adaptación para título principal en sobre-nosotros.html */
 main h1 {
   font-size: 1.5rem;
   font-weight: 900;
@@ -59,7 +58,6 @@ main h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Encabezado de todas las pestañas */
 .navbar {
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
@@ -90,16 +88,30 @@ main h1 {
   text-align: center;
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* Estilos corregidos para el botón de modo oscuro y el botón de música */
 #dark-mode {
-  background-color: #a375e9;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 8px 16px;
   border-radius: 0.5rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
+#musicBtn {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
 
 .menu {
   display: flex;
@@ -163,7 +175,6 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Cuerpo de todas las pestañas */
 main p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -178,7 +189,6 @@ main ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Clases de las tareas/notas completadas.html y index.html */
 .nueva-tarea {
   display: flex;
   gap: 0.5rem;
@@ -239,10 +249,29 @@ main ul li {
   border-radius: 0.75rem;
   border: 1px solid var(--border-color);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+.tarea-content {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.tarea-content textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 .tarea:hover {
@@ -272,7 +301,6 @@ main ul li {
   transform: scale(1.1);
 }
 
-/* Pie de página de cada pestaña */
 .footer-container {
   padding: 1.28rem;
   text-align: center;
@@ -293,15 +321,6 @@ main ul li {
   margin-bottom: 0.5rem;
 }
 
-#musicBtn {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 #Borrar {
   background-color: #4a148c;
   color: var(--button-text);
@@ -313,13 +332,11 @@ main ul li {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Clases del unete.css */
 .menu-container .logo {
   margin-bottom: 1rem;
   text-align: center;
@@ -435,7 +452,6 @@ input[type="password"] {
 
 /* --- Diseño Responsivo --- */
 
-/* Adaptaciones para Tablet (> 480px) */
 @media (min-width: 481px) {
   .navbar {
     flex-direction: row;
@@ -463,9 +479,19 @@ input[type="password"] {
     font-size: 1rem;
     padding: 0rem 0;
   }
+
+  .tarea {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .botones-tarea {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-/* Adaptaciones para Laptop (> 992px) */
 @media (min-width: 992px) {
   .menu-container {
     padding: 2.5rem;
@@ -481,7 +507,6 @@ input[type="password"] {
   }
 }
 
-/* Adaptaciones para PC (> 1200px) */
 @media (min-width: 1200px) {
   .menu-container {
     padding: 3rem;
