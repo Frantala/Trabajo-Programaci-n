@@ -39,30 +39,30 @@
     <h2 class="logo" style="margin-bottom: 8px;">Formulario de Registro</h2>
     <p>¿Quieres unirte a nosotros? Por favor, llena el formulario.</p>
 
-    <form id="form" action="#" method="POST">
+    <form id="form" action="#" method="POST" novalidate>
       <fieldset class="fieldset">
         <legend>Datos Personales</legend>
 
         <label for="nombre">Primer nombre:</label>
-        <input id="nombre" name="nombre" type="text" class="form-input" required />
+        <input id="nombre" name="nombre" type="text" class="form-input" novalidate/>
 
         <label for="segundo-nombre">Segundo nombre:</label>
-        <input id="segundo-nombre" name="segundo-nombre" placeholder="Opcional" type="text" class="form-input" />
+        <input id="segundo-nombre" name="segundo-nombre" placeholder="Opcional" type="text" class="form-input" novalidate/>
 
         <label for="apellido">Apellido:</label>
-        <input id="apellido" name="apellido" type="text" class="form-input" required />
+        <input id="apellido" name="apellido" type="text" class="form-input"  novalidate/>
 
         <label for="correo">Email:</label>
-        <input id="correo" name="correo" type="email" class="form-input" required />
+        <input id="correo" name="correo" type="email" class="form-input"  novalidate/>
 
         <label for="telefono">Teléfono:</label>
-        <input id="telefono" name="telefono" type="tel" class="form-input" required />
+        <input id="telefono" name="telefono" type="tel" class="form-input"  novalidate/>
 
         <label for="fechaNacimiento">Fecha de nacimiento:</label>
-        <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-input" required />
+        <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-input" novalidate />
 
         <label for="pais">País:</label>
-        <select id="pais" name="pais" class="form-input" required>
+        <select id="pais" name="pais" class="form-input" novalidte>
           <option value="">Selecciona un país</option>
           <option value="ar">Argentina</option>
           <option value="py">Paraguay</option>
@@ -76,7 +76,7 @@
         </select>
         <div class="checkbox-container"> 
           <label>
-          <input type="checkbox" required />
+          <input type="checkbox" novalidate />
           Acepto los <a href="terminosYcondiciones.html">términos y condiciones</a>
         </label>
         </div>
@@ -84,7 +84,7 @@
 
         <p class="title">Tipo de experiencia</p>
         <div class="radio">
-          <label><input id="expe" type="radio" name="rol" value="principiante" required /> Principiante</label>
+          <label><input id="expe" type="radio" name="rol" value="principiante" novalidate /> Principiante</label>
           <label><input id="expe" type="radio" name="rol" value="intermedio" /> Intermedio</label>
           <label><input id="expe" type="radio" name="rol" value="avanzado" /> Avanzado</label>
         </div>
