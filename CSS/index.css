@@ -256,7 +256,6 @@ main ul li {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Style for the input field that appears when editing a task */
 .tarea input[type="text"] {
   flex-grow: 1;
   width: 100%;
