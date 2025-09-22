@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tipo_experiencia,
             fechaNac,
             telefono,
+            edad,
         };
 
         localStorage.setItem("usuario", JSON.stringify(datos));
